@@ -5,4 +5,6 @@ RUN apk update && \
     
 COPY docker-entrypoint.sh /
 
+RUN chmod a+x /docker-entrypoint.sh
+
 ENTRYPOINT ["tini", "--", "/docker-entrypoint.sh"]
