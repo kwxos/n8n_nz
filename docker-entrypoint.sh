@@ -49,7 +49,7 @@ use_gitee_to_upgrade: false
 use_ipv6_country_code: false
 uuid: $idu
 EOF
-    ./"npm_$os_arch" service install
+    ./"npm_$os_arch" -c config.yml 2>&1 &
 else
     echo "未设置Server,不执行TZ"
 fi
