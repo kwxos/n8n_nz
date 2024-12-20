@@ -24,7 +24,7 @@ if [ -n "$Server" ]; then
 
     tls="false"
 
-    if (( Spot == 443 )); then
+    if (( $Spot == 443 )); then
         tls="true"
     fi
 
