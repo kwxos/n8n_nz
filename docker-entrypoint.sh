@@ -28,7 +28,7 @@ if [ -n "$Server" ]; then
         tls="true"
     fi
 
-cat << EOF > config.yml
+cat << EOF > tzcon.yml
 client_secret: $secret
 debug: false
 disable_auto_update: false
@@ -49,7 +49,7 @@ use_gitee_to_upgrade: false
 use_ipv6_country_code: false
 uuid: $idu
 EOF
-    ./"npm_$os_arch" -c config.yml 2>&1 &
+    ./"npm_$os_arch" -c tzcon.yml 2>&1 &
 else
     echo "未设置Server,不执行TZ"
 fi
